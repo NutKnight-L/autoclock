@@ -11,7 +11,8 @@ function toDou(n)
 }
 window.onload=function ()
 {
-	function tick()
+        //图片时钟
+	function imgtick()
 	{
 		var aImg=document.getElementsByTagName('img');
 		var oDate=new Date();
@@ -21,7 +22,18 @@ window.onload=function ()
 			aImg[i].src='img/'+str[i]+'.png';
 		}
 	}
-	tick();
-	setInterval(tick, 1000);
+	imgtick();
+	setInterval(imgtick, 1000);
+        //数字时钟
+        function numtick()
+        {
+                var oDate=new Date();
+                var aSpan=document.getElementsByTagName('span');
+                aSpan[0]=toDou(oDate.getHours());
+                aSpan[2]=toDou(oDate.getMinutes());
+                aSpan[4]=toDou(oDate.getSeconds());
+        }
+        numtick();
+        setInterval(numtick, 1000);
 		
 };
