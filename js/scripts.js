@@ -29,9 +29,9 @@ window.onload=function ()
         {
                 var oDate=new Date();
                 var aSpan=document.getElementsByTagName('span');
-                aSpan[0]=toDou(oDate.getHours());
-                aSpan[2]=toDou(oDate.getMinutes());
-                aSpan[4]=toDou(oDate.getSeconds());
+                aSpan[0].innerHTML=toDou(oDate.getHours());
+                aSpan[2].innerHTML=toDou(oDate.getMinutes());
+                aSpan[4].innerHTML=toDou(oDate.getSeconds());
         }
         numtick();
         setInterval(numtick, 1000);
